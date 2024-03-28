@@ -1,0 +1,138 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <AssemblyName>Waterwraith</AssemblyName>
+        <Description>Escape from the Waterwraith from the pikmin.</Description>
+        <Version>0.7.1</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latest</LangVersion>
+        <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BepInEx.Analyzers" Version="1.0.8">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="BepInEx.Core" Version="5.4.21" />
+      <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
+      <PackageReference Include="UnityEngine.Modules" Version="2023.2.15">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="0Harmony">
+        <HintPath>..\..\allthefiles\0Harmony.dll</HintPath>
+      </Reference>
+      <Reference Include="0Harmony20">
+        <HintPath>..\..\allthefiles\0Harmony20.dll</HintPath>
+      </Reference>
+      <Reference Include="AmazingAssets.TerrainToMesh">
+        <HintPath>..\..\allthefiles\AmazingAssets.TerrainToMesh.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>..\..\allthefiles\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp-firstpass">
+        <HintPath>..\..\allthefiles\Assembly-CSharp-firstpass.dll</HintPath>
+      </Reference>
+      <Reference Include="BepInEx">
+        <HintPath>..\..\allthefiles\BepInEx.dll</HintPath>
+      </Reference>
+      <Reference Include="BepInEx.Preloader">
+        <HintPath>..\..\allthefiles\BepInEx.Preloader.dll</HintPath>
+      </Reference>
+      <Reference Include="ClientNetworkTransform">
+        <HintPath>..\..\allthefiles\ClientNetworkTransform.dll</HintPath>
+      </Reference>
+      <Reference Include="DissonanceVoip">
+        <HintPath>..\..\allthefiles\DissonanceVoip.dll</HintPath>
+      </Reference>
+      <Reference Include="ExampleEnemy">
+        <HintPath>..\..\allthefiles\ExampleEnemy.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch Transport for Netcode for GameObjects">
+        <HintPath>..\..\allthefiles\Facepunch Transport for Netcode for GameObjects.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Steamworks.Win64">
+        <HintPath>..\..\allthefiles\Facepunch.Steamworks.Win64.dll</HintPath>
+      </Reference>
+      <Reference Include="HarmonyXInterop">
+        <HintPath>..\..\allthefiles\HarmonyXInterop.dll</HintPath>
+      </Reference>
+      <Reference Include="LethalConfig">
+        <HintPath>..\..\allthefiles\LethalConfig.dll</HintPath>
+      </Reference>
+      <Reference Include="LethalLib">
+        <HintPath>..\..\allthefiles\LethalLib.dll</HintPath>
+      </Reference>
+      <Reference Include="MMHOOK_AmazingAssets.TerrainToMesh">
+        <HintPath>..\..\allthefiles\MMHOOK_AmazingAssets.TerrainToMesh.dll</HintPath>
+      </Reference>
+      <Reference Include="MMHOOK_Assembly-CSharp">
+        <HintPath>..\..\allthefiles\MMHOOK_Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="MMHOOK_ClientNetworkTransform">
+        <HintPath>..\..\allthefiles\MMHOOK_ClientNetworkTransform.dll</HintPath>
+      </Reference>
+      <Reference Include="MMHOOK_DissonanceVoip">
+        <HintPath>..\..\allthefiles\MMHOOK_DissonanceVoip.dll</HintPath>
+      </Reference>
+      <Reference Include="MMHOOK_Facepunch Transport for Netcode for GameObjects">
+        <HintPath>..\..\allthefiles\MMHOOK_Facepunch Transport for Netcode for GameObjects.dll</HintPath>
+      </Reference>
+      <Reference Include="MMHOOK_Facepunch.Steamworks.Win64">
+        <HintPath>..\..\allthefiles\MMHOOK_Facepunch.Steamworks.Win64.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil">
+        <HintPath>..\..\allthefiles\Mono.Cecil.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil.Mdb">
+        <HintPath>..\..\allthefiles\Mono.Cecil.Mdb.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil.Pdb">
+        <HintPath>..\..\allthefiles\Mono.Cecil.Pdb.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil.Rocks">
+        <HintPath>..\..\allthefiles\Mono.Cecil.Rocks.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.RuntimeDetour">
+        <HintPath>..\..\allthefiles\MonoMod.RuntimeDetour.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Utils">
+        <HintPath>..\..\allthefiles\MonoMod.Utils.dll</HintPath>
+      </Reference>
+      <Reference Include="Newtonsoft.Json">
+        <HintPath>..\..\allthefiles\Newtonsoft.Json.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Netcode.Runtime">
+        <HintPath>..\..\allthefiles\Unity.Netcode.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine">
+        <HintPath>..\..\allthefiles\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AIModule">
+        <HintPath>..\..\allthefiles\UnityEngine.AIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AssetBundleModule">
+        <HintPath>..\..\allthefiles\UnityEngine.AssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+        <HintPath>..\..\allthefiles\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PhysicsModule">
+        <HintPath>..\..\allthefiles\UnityEngine.PhysicsModule.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="cd &quot;C:\Users\jaesw\OneDrive\Desktop\Lethal Company Mods\ImmortalSnail\Plugin\ImmortalSnail\bin\Debug\netstandard2.1&quot;&#xD;&#xA;netcode-patch ImmortalSnail.dll &quot;C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed&quot;&#xD;&#xA;copy ImmortalSnail.dll &quot;C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\BepInEx\plugins\AmesBoys-ImmortalSnail&quot; /Y&#xD;&#xA;copy ImmortalSnail.dll &quot;C:\Users\jaesw\AppData\Roaming\Thunderstore Mod Manager\DataFolder\LethalCompany\profiles\DevProfile\BepInEx\plugins\AmesBoys-ImmortalSnail&quot; /Y" />
+    </Target>
+</Project>
